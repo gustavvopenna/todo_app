@@ -12,12 +12,21 @@ function createListElement() {
 	li.appendChild(document.createTextNode(input.value));
 	ul.appendChild(li);
 	input.value = ("");
+
 	//-- Create Delete Button --//
 	var button = document.createElement("button");
 	button.classList.add("fa", "fa-trash-alt");
 	// button.appendChild(document.createTextNode("Delete"));
 	li.appendChild(button);
 	button.onclick = removeParent;
+
+	// Create Check Button
+	var button2 = document.createElement("button");
+	button2.classList.add("fas", "fa-check-square");
+	// button.appendChild(document.createTextNode("Delete"));
+	li.appendChild(button2);
+	var doneList = document.getElementById("isDone");
+	button2.onclick = li.appendTo(doneList);
 }
 
 
