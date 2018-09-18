@@ -14,7 +14,8 @@ function createListElement() {
 	input.value = ("");
 	//-- Create Delete Button --//
 	var button = document.createElement("button");
-	button.appendChild(document.createTextNode("Delete"));
+	button.classList.add("fa", "fa-trash-alt");
+	// button.appendChild(document.createTextNode("Delete"));
 	li.appendChild(button);
 	button.onclick = removeParent;
 }
